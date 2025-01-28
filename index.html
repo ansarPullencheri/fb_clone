@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Facebook Clone</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,94 +13,137 @@
         </div>
         <div class="tabl">
             <table>
-            <tr>
-                <td><label>Email</label></td>
-                <td><label>password</label></td>
-            </tr>
-            <tr>
-                <td>
-                    <form action=""> <input type="text" placeholder="email or number"></form>
-                </td>
-                <td>
-                    <form action=""><input type="password" placeholder="password"></form>
-                </td>
-                <td>
-                    <button type="sumbit ">login</button>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td> <a href="fogetten password"></a></td>
-            </tr>
-        </table>
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><label>Password</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <form action=""> <input type="text" id="loginEmail" placeholder="email or number"></form>
+                    </td>
+                    <td>
+                        <form action=""><input type="password" id="loginPassword" placeholder="password"></form>
+                    </td>
+                    <td>
+                        <button type="submit" onclick="validateLogin()">Login</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <a href="forgotten password"></a></td>
+                </tr>
+            </table>
         </div>
-
     </div>
     <div class="container">
-<img src="facebook-removebg-preview.png" alt="" class="img">
- <div class="a"><h3>Facebook helps you to connect and shere with <br>the  people in your life</h3></div>
-<div class="form">
-    <h1 class="dark">Creat Account</h1>
-    <h2 class="dark">it's free and always will be.</h2>
-    <form action="">
-
-                    <input class="name" type="text" placeholder="Firstname">
-                    <input class="name" type="text" placeholder="Surname"> <br><br>
-                    <input class="email" type="text" placeholder="Mobil Number or Email"><br><br>
-                    <input class="password" type="text" placeholder="password">
-
-
-    </form>
-    <h3 class="dark">birthday</h3>
-    <select name="" id="">
-<option value="">day</option>
-<option value="">1</option>
-<option value="">2</option>
-<option value="">3</option>
-<option value="">4</option>
-<option value="">5</option>
-<option value="">6</option>
-<option value="">7</option>
-
-
-    </select>
-    <select name="" id="">
-        <option value="">month</option>
-        <option value="">jan</option>
-        <option value="">feb</option>
-        <option value="">mar</option>
-        <option value="">aprl</option>
-        <option value="">may</option>
-        <option value="">jun</option>
-        <option value="">july</option>
-        <option value="">agu</option>
-
-
-
-    </select>
-    <select name="" id="">
-        <option value="">year</option>
-        <option value="">1999</option>
-        <option value="">2000</option>
-        <option value="">2001</option>
-        <option value="">2002</option>
-        <option value="">2003</option>
-        <option value="">2004</option>
-        <option value="">2005</option>
-        <option value="">2006</option>
-    </select>
-    <a href="" class="birth">Why i need to provide <br> my date of birth</a><br><br>
-    <input class="genter" type="radio">male
-    <input class="genter" type="radio">female
-    <p>
-
-        By clicking to sign up you agree to our <a href="">terms and policy</a>and <br><a href="">cookie policy</a>
-        you may recieve sms notification from us and <br>can opt out any time 
-    </p>
-    <button class="signup">signup</button>
-    <p><a href="">craet a page</a>for celebrity,band or business</p>
-
-</div>
+        <img src="facebook-removebg-preview.png" alt="" class="img">
+        <div class="a"><h3>Facebook helps you to connect and share with <br>the people in your life</h3></div>
+        <div class="form">
+            <h1 class="dark">Create Account</h1>
+            <h2 class="dark">It's free and always will be.</h2>
+            <form id="signupForm" action="">
+                <input class="name" type="text" id="firstName" placeholder="Firstname">
+                <input class="name" type="text" id="surname" placeholder="Surname"> <br><br>
+                <input class="email" type="text" id="email" placeholder="Mobile Number or Email"><br><br>
+                <input class="password" type="password" id="password" placeholder="Password">
+                <h3 class="dark">Birthday</h3>
+                <select id="day">
+                    <option value="">Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+                <select id="month">
+                    <option value="">Month</option>
+                    <option value="1">Jan</option>
+                    <option value="2">Feb</option>
+                    <option value="3">Mar</option>
+                    <option value="4">Apr</option>
+                    <option value="5">May</option>
+                    <option value="6">Jun</option>
+                    <option value="7">Jul</option>
+                    <option value="8">Aug</option>
+                </select>
+                <select id="year">
+                    <option value="">Year</option>
+                    <option value="1999">1999</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                </select>
+                <a href="" class="birth">Why I need to provide <br> my date of birth</a><br><br>
+                <input class="gender" type="radio" name="gender" value="male">Male
+                <input class="gender" type="radio" name="gender" value="female">Female
+                <p>
+                    By clicking to sign up you agree to our <a href="">terms and policy</a> and <br><a href="">cookie policy</a>.
+                    You may receive SMS notifications from us and <br>can opt out any time.
+                </p>
+                <button type="submit" class="signup" onclick="validateSignup()">Sign Up</button>
+                <p><a href="">Create a page</a> for a celebrity, band, or business.</p>
+            </form>
+        </div>
     </div>
+
+    <script>
+        function validateLogin() {
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            if (email === "" || password === "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            alert("Login successful!");
+            return true;
+        }
+
+        function validateSignup() {
+            const firstName = document.getElementById('firstName').value;
+            const surname = document.getElementById('surname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const day = document.getElementById('day').value;
+            const month = document.getElementById('month').value;
+            const year = document.getElementById('year').value;
+            const gender = document.querySelector('input[name="gender"]:checked');
+
+            if (firstName === "" || surname === "" || email === "" || password === "" || day === "" || month === "" || year === "" || !gender) {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long.");
+                return false;
+            }
+
+            alert("Signup successful!");
+            return true;
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
 </body>
 </html>
